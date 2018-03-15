@@ -6,7 +6,7 @@
 #include "Dummy.h"
 #include "DummyESC.h"
 
-#define NUM_MODULES 1
+#define NUM_MODULES 2
 
 class Application
 {
@@ -15,7 +15,11 @@ public:
 	Module* modules[NUM_MODULES];
 
 public:
-
+	~Application() {
+		for (int i = NUM_MODULES - 1; i >= 0; --i) {
+			delete modules[i];
+		}
+	}
 	Application()
 	{
 		modules[0] = new ModuleDummy();
@@ -63,7 +67,6 @@ public:
 		}
 		return true;
 	}
-
 };
 
 #endif // __APPLICATION_H__
