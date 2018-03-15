@@ -52,7 +52,7 @@ int main()
 					LOG("\nApplication Update exits with error -----");
 					state = MAIN_EXIT;
 				}
-				else if (status == update_status::UPDATE_STOP)
+				else if (status == update_status::UPDATE_CONTINUE)
 					state = MAIN_FINISH;
 
 			} break;

@@ -44,15 +44,15 @@ public:
 		for (int i = 0; i < NUM_MODULES; ++i) {
 			if (modules[i]->PreUpdate() == UPDATE_STOP) return update_status::UPDATE_ERROR;
 		}
-		return update_status::UPDATE_CONTINUE;
+		//return update_status::UPDATE_CONTINUE;
 		for (int i = 0; i < NUM_MODULES; ++i) {
 			if (modules[i]->Update() == UPDATE_STOP) return update_status::UPDATE_ERROR;
-			return update_status::UPDATE_CONTINUE;
+			//return update_status::UPDATE_CONTINUE;
 		}
 		for (int i = 0; i < NUM_MODULES; ++i) {
 			if (modules[i]->PostUpdate() == UPDATE_STOP) return update_status::UPDATE_ERROR;
-			return update_status::UPDATE_CONTINUE;
 		}
+		return update_status::UPDATE_CONTINUE;
 	}
 	// EXIT Update 
 	// TODO 3: Make sure all modules have a chance to cleanup
