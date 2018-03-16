@@ -4,7 +4,7 @@
 #include "Globals.h"
 #include "Module.h"
 #include "Dummy.h"
-#include "DummyESC.h"
+#include "ModuleWindow.h"
 
 #define NUM_MODULES 2
 
@@ -23,7 +23,7 @@ public:
 	Application()
 	{
 		modules[0] = new ModuleDummy();
-		modules[1] = new DummyESC();
+		//modules[1] = new ModuleWindow();
 		// TODO 7: Create your new module "DummyESC"
 		// it should check if player it ESC key use kbhit()
 		// http://www.cprogramming.com/fod/kbhit.html

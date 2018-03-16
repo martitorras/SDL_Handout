@@ -4,35 +4,35 @@
 #include "Module.h"
 #include "Globals.h"
 
-class DummyESC : public Module
+class ModuleDummyESC : public Module
 {
 	bool Init()
 	{
-		LOG("Dummy Init!");
+		LOG("DummyESC Init!");
 		return true;
 	}
 
 	update_status PreUpdate()
 	{
-		LOG("Dummy PreUpdate!");
+		LOG("DummyESC PreUpdate!");
 		return update_status::UPDATE_CONTINUE;
 	}
 
 	update_status Update()
 	{
-		LOG("Dummy Update!");
+		LOG("DummyESC Update!");
 		return update_status::UPDATE_CONTINUE;
 	}
 
 	update_status PostUpdate()
 	{
-		LOG("Dummy PostUpdate!");
+		LOG("DummyESC PostUpdate!");
 		return update_status::UPDATE_CONTINUE;
 	}
 
 	bool CleanUp()
 	{
-		LOG("Dummy CleanUp!");
+		LOG("DummyESC CleanUp!");
 		return true;
 	}
 };

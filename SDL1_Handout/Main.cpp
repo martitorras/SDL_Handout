@@ -80,5 +80,6 @@ int main()
 
 	LOG("\nBye :)\n");
 	// TODO 6: Remove ALL memory leaks
+	delete App;
 	return main_return;
 }
